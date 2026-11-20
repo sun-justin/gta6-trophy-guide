@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide &amp; Tracker — all 55 PS5 trophies</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site-header">
+  <div>
+    <h1>Grand Theft Auto VI — Trophy Guide &amp; Tracker</h1>
+    <p class="tagline">All 55 official PlayStation 5 trophies, with a guide for each, a roadmap to the platinum, and a checklist that saves in your browser. Works fully offline.</p>
+  </div>
+  <div class="progress-card" id="progressCard">
+    <p class="progress-line"><strong id="progressText">0 of 55 earned</strong> <span id="progressPct">0%</span></p>
+    <div class="progress-bar"><div id="progressFill"></div></div>
+    <p class="grade-counts" id="gradeCounts"></p>
+    <p class="platinum-note" id="platinumNote">Platinum “Vice Got a Price!” unlocks when the other 54 are earned.</p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" class="tab active" data-view="checklist">Checklist</button>
+  <button type="button" class="tab" data-view="roadmap">Roadmap to Platinum</button>
+  <button type="button" class="tab" data-view="about">About &amp; sources</button>
+</nav>
+
+<section class="controls" aria-label="Checklist controls">
+  <label class="search">Search <input id="search" type="search" placeholder="Trophy name or keyword…"></label>
+  <fieldset class="kind-filters" id="kindFilters">
+    <legend>Kind</legend>
+    <button type="button" data-kind="all" class="kind active">All</button>
+    <button type="button" data-kind="story" class="kind">Story</button>
+    <button type="button" data-kind="missable" class="kind">Missable</button>
+    <button type="button" data-kind="collectibles" class="kind">Collectibles</button>
+    <button type="button" data-kind="activities" class="kind">Activities</button>
+    <button type="button" data-kind="online" class="kind">Online</button>
+  </fieldset>
+  <label>Grade
+    <select id="grade">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="check"><input id="spoilers" type="checkbox"> Hide story spoilers</label>
+  <label class="check"><input id="unearnedOnly" type="checkbox"> Unearned only</label>
+  <div class="data-buttons">
+    <button id="export" type="button">Export progress</button>
+    <label class="import">Import progress <input id="import" type="file" accept="application/json"></label>
+    <button id="demo" type="button">Load demo progress</button>
+    <button id="reset" type="button">Reset</button>
+  </div>
+</section>
+
+<main class="layout">
+  <section id="view-checklist" class="view">
+    <p class="list-meta" id="listMeta"></p>
+    <table class="trophy-table">
+      <thead><tr><th>Earned</th><th>Trophy</th><th>Grade</th><th>Kind</th><th>Guide</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </section>
+
+  <aside id="detail" class="detail" aria-label="Trophy guide">
+    <p class="detail-empty" id="detailEmpty">Select a trophy’s “Guide” button to read its guide and sources here.</p>
+    <div id="detailBody" hidden></div>
+  </aside>
+
+  <section id="view-roadmap" class="view" hidden>
+    <h2>Roadmap to the platinum</h2>
+    <p class="roadmap-intro">Work in this order. Story trophies come first because several are tied to a single mission — do them on your first pass. Collectibles and cleanup come last, when the whole map is open to you. The platinum, “Vice Got a Price!”, unlocks automatically once the other 54 are earned.</p>
+    <ol id="roadmapStages" class="roadmap"></ol>
+  </section>
+
+  <section id="view-about" class="view" hidden>
+    <h2>About this guide</h2>
+    <p>This guide is written in our own words for this entry. Trophy names, descriptions and grades are shown exactly as PlayStation publishes them. Every specific count or step is cited beside the trophy it belongs to, so you can see where each fact comes from.</p>
+    <h3>Sources</h3>
+    <ul>
+      <li><strong>Exophase — GTA VI trophy list:</strong> official trophy names, descriptions and grades, frozen 2026-11-18.</li>
+      <li><strong>PSNProfiles — GTA VI trophy list:</strong> the counts PlayStation tracks for trophies that have one (for example 250 stunts, 42 Shooting Range challenges, 100 vehicles).</li>
+      <li><strong>Our own advice:</strong> steps drawn from the official description only, and marked “not yet checked in the game” — GTA VI released on 19 November 2026 and we have not played these trophies through ourselves yet.</li>
+    </ul>
+    <h3>What “missable” means here</h3>
+    <p>A trophy is flagged missable when its description ties it to one specific story mission or one-time moment. Whether GTA VI lets you replay missions is not yet confirmed, so do those on your first pass through the named mission. Chapter-completion trophies are not flagged — finishing a chapter cannot be missed.</p>
+    <h3>Your progress</h3>
+    <p>Ticking a trophy saves it in this browser only (localStorage). Export downloads your progress as a JSON file; Import loads such a file back. Nothing is uploaded anywhere, and the guide fetches nothing from the network.</p>
+  </section>
+</main>
+
+<footer>
+  <p>Unofficial fan guide. Grand Theft Auto and GTA are trademarks of Take-Two Interactive; this guide uses no Rockstar artwork or logo. Trophy list: 55 trophies — 1 platinum, 2 gold, 6 silver, 46 bronze.</p>
+</footer>
+<script type="module" src="app.js"></script>
+</body>
+</html>
